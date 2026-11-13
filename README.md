@@ -20,7 +20,8 @@
 - 每个角色都同时生成 32 / 48 / 64 三种尺寸，Windows 按 DPI 自己挑。
 - 动画角色（忙碌、后台工作中）是真正的 ANI，10 帧 / 8 帧。
 - 拓扑热区跟着图形走：普通指针的点击点在箭头尖上，忙碌指针在圆心。
-- 强调色从图片的高饱和像素里取中位色；觉得不对可以用 `accent` 参数手动指定。
+- 强调色是图片像素颜色按面积比例的混合（掐掉最暗 10% 和最亮 10% 再平均），再拉到中等明度；觉得不对可以用 `accent` 参数手动指定。
+- 特写类图片（整张脸占满画面）会裁成圆形徽章，不画方框，避免桌面上像贴了一张照片。
 
 ## 依赖
 
@@ -64,7 +65,6 @@ Copy-Item -Recurse -Force .\dsh-cursor-maker "$profile\node_modules\dsh-cursor-m
   name: dsh-cursor-maker
   config:
     enabled: true
-    askEachImage: true
     pythonPath: ""
     dataDir: ""
 ```

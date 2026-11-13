@@ -5,8 +5,6 @@
       name: dsh-cursor-maker
       config:
         enabled: true
-        # Ask before replacing the live pointer.
-        askEachImage: true
         # Empty means "find the runtime Python that DSH already ships".
         pythonPath: ""
         # Empty means %LOCALAPPDATA%\DshCursorMaker.

@@ -1,0 +1,13 @@
+# One row, named exactly like the package: the plugin loader mounts the host
+# half from the row whose specifier is the package name.
+- insert:
+    - id: dsh-cursor-maker
+      name: dsh-cursor-maker
+      config:
+        enabled: true
+        # Ask before replacing the live pointer.
+        askEachImage: true
+        # Empty means "find the runtime Python that DSH already ships".
+        pythonPath: ""
+        # Empty means %LOCALAPPDATA%\DshCursorMaker.
+        dataDir: ""

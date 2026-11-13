@@ -1,0 +1,36 @@
+{
+  "name": "dsh-cursor-maker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Turn any picture the user sends into a complete Windows mouse-cursor scheme and swap it in, straight from chat.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cursor",
+    "mouse",
+    "windows"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "dsh-plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml",
+      "platforms": [
+        "win32"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
